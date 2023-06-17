@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="manufacturesingup.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome CDN Link for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+   </head>
+<body>
+  <div class="container">
+    <div class="title">seller Registration</div>
+    <div class="content">
+      <form id="sregister-form">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" id="sfullName" placeholder="Enter your name" required>
+            </div>
+
+         
+            <div class="input-box">
+            <span class="details">Seler code</span>
+            <input type="Number" id="sellercode" placeholder="Enter your sellercode" required>
+            </div>
+            <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" id="semail" placeholder="Enter your email" required>
+            </div>
+            <div class="input-box">
+              <span class="details">password</span>
+              <input type="password" id="spassword" placeholder="Enter your email" required>
+              </div>
+
+              
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input type="text" id="sphoneNumber"placeholder="Enter your number" required>
+              </div>
+            
+             
+  </div>           
+</div>
+            
+        <div class="button">
+          <button  type="submit">Register</button>
+        </div>
+      </form>
+     
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+<script>
+  // Register form submit
+$('#sregister-form').submit(function(e) {
+    e.preventDefault();
+
+    const sellercode = $('#sellercode').val();
+    const semail = $('#semail').val();
+    const spassword = $('#spassword').val();
+    const sfullName =$('#sfullName').val();
+    const sphoneNumber =$('#sphoneNumber').val();
+   
+
+    $.ajax({
+        url: 'http://localhost:5000/sregister',
+        method: 'POST',
+        data: { sellercode, semail, spassword,sfullName,sphoneNumber},
+        success: function(data) {
+            Swal.fire({
+                title: 'Registration Successful',
+                text: 'Please login to continue',
+                icon: 'success'
+            });
+            setTimeout(function() {
+        window.location.href = '/sellerlogin.html';
+    }, 3000);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            if (jqXHR.responseJSON.email) {
+                Swal.fire({
+                    title: 'Registration Failed',
+                    text: jqXHR.responseJSON.email,
+                    icon: 'error'
+                });
+            }
+        }
+    });
+});
+</script>
+</html>

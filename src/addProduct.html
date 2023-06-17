@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<title>Fake Product Identification</title>
+	<meta charset="utf-6">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="css/qr_code_box.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/templatemo-festava-live.css" rel="stylesheet">
+    
+	
+	</head>
+
+	<body class="mp">
+		<main>
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+                <a class="navbar-brand text-white" href="index.html">
+                    CounterfeitBuster
+                </a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+					<li class="nav-item"><a href="manufacturer.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="addProduct.html" class="nav-link">Add Product</a></li>
+					<li class="nav-item "><a href="addSeller.html" class="nav-link">Add Seller</a></li>
+	
+					  <li class="nav-item"><a href="sellProductManufacturer.html" class="nav-link">Sell Product To Seller</a></li>
+					  <li class="nav-item"><a href="querySeller.html" class="nav-link">Query Seller</a></li>
+					  <li class="nav-item"><a href="index.html" class="nav-link">Logout</a></li>
+					  
+	
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+    <!-- END nav -->
+
+<section class="contact-section section-padding addproductback-section">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+		  <div class="col-lg-8">
+			<div class="card shadow-lg border-0 rounded-lg mt-5">
+			  <div class="card-header">
+				<h3 class="text-dark text-center font-weight-light my-4">Add Product</h3>
+			  </div>
+			  <div class="card-body">
+				<form>
+				  <div class="form-floating mb-3">
+					<input class="form-control" id="manufacturerID" name="Manufacturer ID" type="text" placeholder=" ">
+					<label for="manufacturerID">Manufacturer ID</label>
+				  </div>
+				  <div class="form-floating mb-3">
+					<input class="form-control" id="productName" name="productName" type="text" placeholder=" ">
+					<label for="productName">Product Name</label>
+				  </div>
+				  <div class="form-floating mb-3">
+					<input class="form-control" id="productSN" name="productSN" type="text" placeholder=" ">
+					<label for="productSN">Product SN</label>
+				  </div>
+				  <div class="form-floating mb-3">
+					<input class="form-control" id="productBrand" name="productBrand" type="text" placeholder=" ">
+					<label for="productBrand">Product Brand</label>
+				  </div>
+				  <div class="form-floating mb-3">
+					<input class="form-control" id="productPrice" name="productPrice" type="text" placeholder=" ">
+					<label for="productPrice">Product Price</label>
+				  </div>
+				  <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
+					<button class="btn btn-primary btn-register" id="register" type="button" onclick="fetchQR()">Add the Product</button>
+				  </div>
+				</form>
+			 
+				<div class="qr-code">
+				  <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
+					<img hidden id="imgQR" src="" alt="qr-code" >
+				  </div>
+				  <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
+					<button hidden class="btn btn-primary" id="download" type="button" onclick="saveImage()">Download QR Code</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  
+<br></br>
+</section> 
+<!-- <footer>
+	<div class="container">
+	  <p class="text-center">Copyright &copy; Fake Product Detection</p>
+	</div>
+  </footer> -->
+  <footer class="site-footer">
+	<div class="site-footer-top">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-6 col-12">
+					<h2 class="text-white mb-lg-0">Counterfeit Buster</h2>
+				</div>
+
+				<div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
+					<ul class="social-icon d-flex justify-content-lg-end">
+						<li class="social-icon-item">
+							<a href="#" class="social-icon-link">
+								<span class="bi-twitter"></span>
+							</a>
+						</li>
+
+						<li class="social-icon-item">
+							<a href="#" class="social-icon-link">
+								<span class="bi-apple"></span>
+							</a>
+						</li>
+
+						<li class="social-icon-item">
+							<a href="#" class="social-icon-link">
+								<span class="bi-instagram"></span>
+							</a>
+						</li>
+
+						<li class="social-icon-item">
+							<a href="#" class="social-icon-link">
+								<span class="bi-youtube"></span>
+							</a>
+						</li>
+
+						<li class="social-icon-item">
+							<a href="#" class="social-icon-link">
+								<span class="bi-pinterest"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="site-footer-bottom">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-3 col-12 mt-5">
+				  <p class="copyright-text">Copyright © 2036 Fake Product Detection</p>
+
+					<p class="copyright-text">Distributed by: <a href="https://themewagon.com">TeamCounterfiteBusters</a></p>
+				</div>
+
+				<div class="col-lg-8 col-12 mt-lg-5 ">
+					<ul class="site-footer-links d-flex flex-row-reverse">
+						<li class="site-footer-link-item">
+							<a href="#" class="site-footer-link">Terms &amp; Conditions</a>
+						</li>
+
+						<li class="site-footer-link-item">
+							<a href="#" class="site-footer-link">Privacy Policy</a>
+						</li>
+
+						<li class="site-footer-link-item">
+							<a href="#" class="site-footer-link">Your Feedback</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/web3.min.js"></script>
+	<script src="js/truffle-contract.js"></script>
+	<script src="js/productApp.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/custom.js"></script>
+
+
+<script>
+	var src;
+	var qrValue;
+	function fetchQR(){
+		qrValue = document.getElementById('productSN').value;
+		qrImage = document.querySelector(".qr-code");
+		qrImageResult = qrImage.querySelector("img");
+		src = qrImageResult.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${qrValue}`;
+		
+
+		downloadQrImg = document.getElementById('imgQR');
+		downloadQrBtn = document.getElementById('download');
+		downloadQrImg.removeAttribute('hidden');
+		downloadQrBtn.removeAttribute('hidden');
+
+	}
+
+	function saveImage(){
+		saveAs(src,qrValue);
+		downloadQrImg.setAttribute('hidden', 'hidden');
+		downloadQrBtn.setAttribute('hidden', 'hidden');
+	}
+
+
+
+$(document).ready(function() {
+  $.ajax({
+    url: '/http://localhost:5000/addproduct',
+    method: 'GET',
+    success: function(response) {
+      $('#email').text(response.email);
+    },
+    error: function(xhr, status, error) {
+      // Handle error
+    }
+  });
+});
+
+	</script>
+		</main>
+  </body>
+</html>

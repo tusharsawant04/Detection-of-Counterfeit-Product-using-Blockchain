@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/templatemo-festava-live.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <meta name="author" content="">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/templatemo-festava-live.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="css/qr_code_box.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/templatemo-festava-live.css" rel="stylesheet">
+  
+   </head>
+<body>
+  <main>	
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            CounterfeitBuster
+        </a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+        <li class="nav-item">
+            <a href="index.html" class="nav-link click-scroll">Home</a>
+        </li>
+        <li class="nav-item">
+  <a href="manufacturerlogin.html" class="nav-link click-scroll">Manufacturer</a>
+        </li>
+        <li class="nav-item">
+    <a href="sellerlogin.html" class="nav-link click-scroll">Seller</a></li>
+        <li class="nav-item">
+      <a href="consumer.html" class="nav-link click-scroll">Consumer</a></li>
+        </ul>
+</div>
+</div>
+</nav>
+<!-- END nav -->
+<section class="contact-section section-padding artistsq-sections" id="section_6">
+  <div class="card mx-auto mt-lg-5" style="max-width: 50rem;">
+    <div class="card-body">
+      <h5 class="card-title text-center mb-4">Manufacturer Brand Registration</h5>
+      <form id="register-form">
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullName" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+        </div>
+        <div class="mb-3">
+          <label for="phoneNumber" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your number" required>
+        </div>
+        <div class="mb-3">
+          <label for="companyDesc" class="form-label">Company Description</label>
+          <textarea class="form-control" id="companyDesc" rows="3" placeholder="Enter your Company Description" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="brandName" class="form-label">Brand Name</label>
+          <input type="text" class="form-control" id="brandName" placeholder="Enter Your Brand Name" required>
+        </div>
+        <div class="mb-3">
+          <div class="d-flex justify-content-center align-items-center">
+            <button type="submit" class="btn btn-primary btn-block">Register </button>
+            <div class="spinner-border text-light ml-3 d-none" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  </section>
+
+</body>
+<script src="script.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/click-scroll.js"></script>
+  <script src="js/custom.js"></script>
+<script>
+  // Register form submit
+$('#register-form').submit(function(e) {
+    e.preventDefault();
+
+    const username = $('#username').val();
+    const email = $('#email').val();
+    const password = $('#password').val();
+    const fullName =$('#fullName').val();
+    const phoneNumber =$('#phoneNumber').val();
+    const companyDesc =$('#companyDesc').val();
+    const brandName = $('#brandName').val();
+
+    $.ajax({
+        url: 'http://localhost:5000/register',
+        method: 'POST',
+        data: { username, email, password,fullName,phoneNumber,companyDesc,brandName },
+        success: function(data) {
+            Swal.fire({
+                title: 'Registration Successful',
+                text: 'Please login to continue',
+                icon: 'success'
+            });
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            if (jqXHR.responseJSON.email) {
+                Swal.fire({
+                    title: 'Registration Failed',
+                    text: jqXHR.responseJSON.email,
+                    icon: 'error'
+                });
+            }
+        }
+    });
+});
+</script>
+</html>
